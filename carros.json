@@ -1,0 +1,20 @@
+[
+    {
+        "marca": "teste1",
+        "modelo": "teste2",
+        "Cor": "teste3",
+        "Ano": "teste4"
+    },
+    {
+        "marca": "teste1",
+        "modelo": "teste2",
+        "Cor": "teste3",
+        "Ano": "teste4"
+    },
+    {
+        "marca": "a",
+        "modelo": "b",
+        "Cor": "c",
+        "Ano": "d"
+    }
+]
