@@ -17,21 +17,7 @@
         "id": 3,
         "marca": "a",
         "modelo": "b",
-        "cor": "c",
-        "ano": "d"
-    },
-    {
-        "id": 4,
-        "marca": "g",
-        "modelo": "h",
-        "cor": "f",
-        "ano": "d"
-    },
-    {
-        "id": 5,
-        "marca": "seila",
-        "modelo": "t",
-        "cor": "q",
-        "ano": "s"
+        "Cor": "c",
+        "Ano": "d"
     }
 ]
