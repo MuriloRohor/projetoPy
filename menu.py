@@ -14,28 +14,28 @@ while opcao != 0:
         opcao = int(input("Digite a opção desejada: "))
     except ValueError:
         print("Insira um número válido.")
-<<<<<<< HEAD
+
         Pausar()
-=======
+
         input("Pressione ENTER para continuar... ")
->>>>>>> 3e21d05e43732b9f3fd3e224a45e06f755c66d0b
+
         
         
     
     if opcao == 1:
         CadastrarCarro()
         print("Carro cadastrado com sucesso!")
-<<<<<<< HEAD
+
         Pausar()
 
     elif opcao == 2:
         ListarCarros()
         Pausar()
-=======
+
 
     elif opcao == 2:
         pass
->>>>>>> 3e21d05e43732b9f3fd3e224a45e06f755c66d0b
+
     
     elif opcao == 3:
         pass
@@ -49,8 +49,8 @@ while opcao != 0:
 
     else:
         print("Insira uma opcao válida.")
-<<<<<<< HEAD
+
         Pausar()
-=======
+
         input("Pressione ENTER para continuar... ")
->>>>>>> 3e21d05e43732b9f3fd3e224a45e06f755c66d0b
+
