@@ -7,17 +7,10 @@
         "ano": "teste4"
     },
     {
-        "id": 2,
-        "marca": "dsdsds",
-        "modelo": "teste2",
-        "cor": "teste3",
-        "ano": "teste4"
-    },
-    {
         "id": 3,
         "marca": "a",
         "modelo": "b",
-        "Cor": "c",
-        "Ano": "d"
+        "cor": "c",
+        "ano": "d"
     }
 ]

@@ -3,10 +3,11 @@ opcao = None
 
 while opcao != 0:
     print("""
-        1 - Cadastrar Veiculos
+        1 - Cadastrar Veiculo
         2 - Listar Veículos
-        3 - Editar Veículos
-        4 - Remover Veículos
+        3 - Selecionar Veículo
+        4 - Editar Veículo
+        5 - Remover Veículo
         0 - Sair
     """)
 
@@ -24,33 +25,29 @@ while opcao != 0:
     
     if opcao == 1:
         CadastrarCarro()
-        print("Carro cadastrado com sucesso!")
-
         Pausar()
 
     elif opcao == 2:
         ListarCarros()
         Pausar()
 
-
     elif opcao == 2:
         pass
-
     
     elif opcao == 3:
-        pass
+        SelecionarVeiculoId()
+        Pausar()
 
     elif opcao == 4:
-        pass
+        ExcluirCarro()
+        Pausar()
 
     elif opcao == 0:
         print("Encerrando...")
         break
 
     else:
-        print("Insira uma opcao válida.")
-
+        print("Insira uma opcao válida.\n")
         Pausar()
 
-        input("Pressione ENTER para continuar... ")
 

@@ -28,6 +28,28 @@ def ListarCarros():
             Cor    : {carro['cor']}
             Ano    : {carro['ano']}
             """)
+        
+def ExcluirCarro():
+    id_select = int(input("Digite o ID do veículo que deseja excluir: "))
+    for i, e in enumerate(carros):
+        if e['id'] == id_select:
+            carros.pop(i)
+            salvarArquivo(carros)
+            print("Veículo excluído com sucesso!")
+
+def SelecionarVeiculoId():
+    id_select = int(input("Digite o ID do veículo que deseja selecionar: "))
+    for carro in carros:
+        if carro['id'] == id_select:
+            print(f"""
+            Id     : {carro['id']}
+            Marca  : {carro['marca']}
+            Modelo : {carro['modelo']}
+            cor    : {carro['cor']}
+            ano    : {carro['ano']}
+            """)
+            
+        
 
 def Pausar():
     input("Pressione ENTER para continuar...")
