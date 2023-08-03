@@ -1,6 +1,6 @@
-from lerJson import *
+from DataBaseJson import DataBaseJson
 
-carros = lerArquivo()
+carros = DataBaseJson.LerArquivo()
 
 
 def CadastrarCarro():
@@ -17,7 +17,7 @@ def CadastrarCarro():
     "ano" : ano,
     }
     carros.append(carro_molde)
-    salvarArquivo(carros)
+    DataBaseJson.SalvarArquivo(carros)
 
 def ListarCarros():
     for carro in carros:
@@ -34,7 +34,7 @@ def ExcluirCarro():
     for i, e in enumerate(carros):
         if e['id'] == id_select:
             carros.pop(i)
-            salvarArquivo(carros)
+            DataBaseJson.SalvarArquivo(carros)
             print("Veículo excluído com sucesso!")
 
 def SelecionarVeiculoId():

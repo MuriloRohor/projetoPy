@@ -12,5 +12,12 @@
         "modelo": "b",
         "cor": "c",
         "ano": "d"
+    },
+    {
+        "id": 3,
+        "marca": "Volkswagen",
+        "modelo": "Gol",
+        "cor": "Prata",
+        "ano": "2004"
     }
 ]
