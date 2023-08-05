@@ -1,5 +1,3 @@
-from DataBaseJson import *
-
 class Carro:
     id: int
     marca: str
@@ -7,10 +5,8 @@ class Carro:
     cor: str
     ano: str
     
-
-    def __init__(self, id, marca, modelo, cor, ano) -> None:
-        if id == None:
-            self.id = len(DataBaseJson.LerArquivo()) + 1
+    def __init__(self,marca, modelo, cor, ano, id) -> None:
+        self.id = id
         self.marca = marca
         self.modelo = modelo
         self.cor = cor
