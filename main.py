@@ -1,27 +1,22 @@
 from DataBaseJson import DataBaseJson
+import Carro
 
-carros = DataBaseJson.LerArquivo()
+LISTA_CARROS = DataBaseJson.LerArquivo()
 
-class Carro:
-    marca: str
-    modelo: str
-    cor: str
-    ano: str
-
-    def __init__(self, id, marca, modelo, cor, ano) -> None:
-        self.marca = marca
-        self.modelo = modelo
-        self.cor = cor
-        self.ano = ano
+class Controller:
     
-class CadastrarVeiculo():
     @staticmethod
     def Cadastrar():
         marca = input("Digite a marca do veículo: ")
         modelo = input("Digite o modelo do veículo: ")
         cor = input("Digite a cor do veículo: ")
         ano = input("Digite o ano do veículo: ")
-        return Carro(marca, modelo, cor, ano)
+        LISTA_CARROS.append(Carro(marca, modelo, cor, ano))
+    
+    @staticmethod
+    def Listar():
+        for carro in LISTA_CARROS:
+            print(f"Id: {carro.GetId}\nMarca: {carro.GetMarca}\nModelo: {carro.GetModelo}\nCor: {carro.GetCor}\nAno: {carro.GetAno}")
 
 
 def CadastrarCarro():

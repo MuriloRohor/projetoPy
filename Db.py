@@ -1,6 +1,9 @@
 import sqlite3
 
-conn = sqlite3.connect('meu_banco_de_dados.db')
+# Ainda não implementado
+
+
+conn = sqlite3.connect('db_carros.db')
 c = conn.cursor()
 c.execute('''
     CREATE TABLE carros

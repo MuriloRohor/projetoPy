@@ -24,11 +24,11 @@ while opcao != 0:
         
     
     if opcao == 1:
-        CadastrarCarro()
+        Controller.Cadastrar()
         Pausar()
 
     elif opcao == 2:
-        ListarCarros()
+        Controller.Listar()
         Pausar()
 
     elif opcao == 2:
