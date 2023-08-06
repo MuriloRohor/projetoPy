@@ -21,6 +21,7 @@ class DataBaseJson:
         return DataBaseJson.LISTAOBJECT
     
     @staticmethod
+
     def SalvarArquivo(dados: list):
         for carro in dados:
             j = {
@@ -32,11 +33,13 @@ class DataBaseJson:
                     }
             DataBaseJson.LISTAJSON.append(j)
         with open('log.txt', 'a') as f:
-            f.write(f'\n{datetime.now()}Lista Objetos convertido para Dicionario.')
+            f.write(f'\n{datetime.now()} - Lista Objetos convertido para Dicionario.')
 
         with open(DataBaseJson.NOME_ARQUIVO, 'w+', encoding='utf-8') as arquivo:
             data = json.dumps(DataBaseJson.LISTAJSON, indent=4)
             arquivo.write(data)
+            DataBaseJson.LISTAJSON.clear()
+            
 
                     
 

@@ -2,7 +2,7 @@ from DataBaseJson import DataBaseJson
 from Carro import Carro
 
 LISTA_CARROS = DataBaseJson.LerArquivo()
-qnt_lista = len(LISTA_CARROS)
+
 class Controller:
     
     @staticmethod
@@ -11,13 +11,17 @@ class Controller:
         modelo = input("Digite o modelo do veículo: ")
         cor = input("Digite a cor do veículo: ")
         ano = input("Digite o ano do veículo: ")
-        id = len(DataBaseJson.LerArquivo()) + 1
-        LISTA_CARROS.append(Carro(marca, modelo, cor, ano, id))
+        id = len(LISTA_CARROS) + 1
+        object_carro = Carro(marca, modelo, cor, ano, id)
+        print(LISTA_CARROS)
+        LISTA_CARROS.append(object_carro)
+        print(LISTA_CARROS)
         DataBaseJson.SalvarArquivo(LISTA_CARROS)
     
     @staticmethod
     def Listar():
         for carro in LISTA_CARROS:
+            print('\n')
             print(f"Id: {carro.GetId()}\nMarca: {carro.GetMarca()}\nModelo: {carro.GetModelo()}\nCor: {carro.GetCor()}\nAno: {carro.GetAno()}")
 
 

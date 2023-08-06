@@ -2,6 +2,7 @@ from main import *
 opcao = None
 
 while opcao != 0:
+    
     print("""
         1 - Cadastrar Veiculo
         2 - Listar Veículos
@@ -15,13 +16,9 @@ while opcao != 0:
         opcao = int(input("Digite a opção desejada: "))
     except ValueError:
         print("Insira um número válido.")
-
         Pausar()
-
         input("Pressione ENTER para continuar... ")
-
-        
-        
+     
     
     if opcao == 1:
         Controller.Cadastrar()
