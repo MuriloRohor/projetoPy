@@ -1,4 +1,4 @@
-from main import *
+from Controller import *
 
 def Pausar():
     input("Pressione ENTER para continuar...")

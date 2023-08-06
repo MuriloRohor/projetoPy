@@ -1,6 +1,7 @@
 import json
 from Carro import Carro
 from datetime import datetime
+from log import RegistroLog
 
 class DataBaseJson:
     NOME_ARQUIVO = "carros.json"
@@ -21,19 +22,23 @@ class DataBaseJson:
         return DataBaseJson.LISTAOBJECT
     
     @staticmethod
-
     def SalvarArquivo(dados: list):
         for carro in dados:
-            j = {
-                    'id'    : carro.GetId(),
-                    'marca' : carro.GetMarca(),
-                    'modelo': carro.GetModelo(),
-                    'cor'   : carro.GetCor(),
-                    'ano'   : carro.GetAno()
-                    }
-            DataBaseJson.LISTAJSON.append(j)
-        with open('log.txt', 'a') as f:
-            f.write(f'\n{datetime.now()} - Lista Objetos convertido para Dicionario.')
+            try:
+                j = {
+                        'id'    : carro.GetId(),
+                        'marca' : carro.GetMarca(),
+                        'modelo': carro.GetModelo(),
+                        'cor'   : carro.GetCor(),
+                        'ano'   : carro.GetAno()
+                        }
+                DataBaseJson.LISTAJSON.append(j)
+            except: 
+                print("Erro ao converter a lista de objetos para Json")
+                RegistroLog(4)
+                return
+            
+        RegistroLog(5)
 
         with open(DataBaseJson.NOME_ARQUIVO, 'w+', encoding='utf-8') as arquivo:
             data = json.dumps(DataBaseJson.LISTAJSON, indent=4)

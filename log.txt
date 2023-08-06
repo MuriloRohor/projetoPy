@@ -1,20 +1,3 @@
-2023-08-06 13:40:10.613945 - Lista Objetos convertido para Dicionario.
-2023-08-06 13:42:15.349298 - Lista Objetos convertido para Dicionario.
-2023-08-06 13:46:38.232873 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:01:01.438742 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:02:47.804161 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:11:57.288369 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:12:53.233555 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:19:56.646868 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:27:50.764859 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:31:33.228230 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:31:44.299251 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:35:42.862586 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:35:51.946987 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:57:54.961980 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:58:00.562716 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:58:08.174346 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:58:16.008930 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:58:18.738054 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:58:26.296471 - Lista Objetos convertido para Dicionario.
-2023-08-06 14:58:33.867225 - Lista Objetos convertido para Dicionario.
+
+2023-08-06 16:54:16.670938 - Ambiente Controller -> Objeto Adicionado a lista <LISTA_CARROS> - ID: 1 / MARCA: t / MODELO: t / COR: t / ANO: t
+2023-08-06 16:54:16.671935 - Ambiente DataBaseJson -> Falha ao converter Objeto para Json e adicionar na lista <LISTA_JSON>

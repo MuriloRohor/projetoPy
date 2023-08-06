@@ -1,5 +1,6 @@
 from DataBaseJson import DataBaseJson
 from Carro import Carro
+from log import RegistroLog
 
 LISTA_CARROS = DataBaseJson.LerArquivo()
 
@@ -14,6 +15,7 @@ class Controller:
         id = len(LISTA_CARROS) + 1
         object_carro = Carro(marca, modelo, cor, ano, id)
         LISTA_CARROS.append(object_carro)
+        RegistroLog(1, object_carro)
         DataBaseJson.SalvarArquivo(LISTA_CARROS)
     
     @staticmethod
@@ -24,12 +26,19 @@ class Controller:
 
     @staticmethod
     def Excluir():
-        id_select = int(input("Digite o ID do veículo que deseja excluir: "))
-        for i, e in enumerate(LISTA_CARROS):
-            if e.GetId() == id_select:
-                LISTA_CARROS.pop(i)
-                DataBaseJson.SalvarArquivo(LISTA_CARROS)
-                print("Veículo excluído com sucesso!")
+        try:
+            id_select = int(input("Digite o ID do veículo que deseja excluir: "))
+            for i, e in enumerate(LISTA_CARROS):
+                if e.GetId() == id_select:
+                    LISTA_CARROS.pop(i)
+                    DataBaseJson.SalvarArquivo(LISTA_CARROS)
+                    print("Veículo excluído com sucesso!")
+        except:
+            print("Id inválido...")
+
+        else:
+            RegistroLog(2, e)
+
     @staticmethod
     def SelecionarPorId():
         id_select = int(input("Digite o ID do veículo que deseja selecionar: "))
