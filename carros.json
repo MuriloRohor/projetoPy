@@ -19,26 +19,5 @@
         "modelo": "Civic",
         "cor": "Branco",
         "ano": "2004"
-    },
-    {
-        "id": 4,
-        "marca": "t",
-        "modelo": "t",
-        "cor": "t",
-        "ano": "t"
-    },
-    {
-        "id": 5,
-        "marca": "a",
-        "modelo": "a",
-        "cor": "a",
-        "ano": "a"
-    },
-    {
-        "id": 6,
-        "marca": "b",
-        "modelo": "b",
-        "cor": "b",
-        "ano": "b"
     }
 ]

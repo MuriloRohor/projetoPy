@@ -1,8 +1,11 @@
 from main import *
-opcao = None
 
+def Pausar():
+    input("Pressione ENTER para continuar...")
+
+opcao = None
 while opcao != 0:
-    
+
     print("""
         1 - Cadastrar Veiculo
         2 - Listar Veículos
@@ -28,15 +31,15 @@ while opcao != 0:
         Controller.Listar()
         Pausar()
 
-    elif opcao == 2:
-        pass
-    
     elif opcao == 3:
-        SelecionarVeiculoId()
+        Controller.SelecionarId()
         Pausar()
 
     elif opcao == 4:
-        ExcluirCarro()
+        pass
+    
+    elif opcao == 5:
+        Controller.Excluir()
         Pausar()
 
     elif opcao == 0:
@@ -44,7 +47,7 @@ while opcao != 0:
         break
 
     else:
-        print("Insira uma opcao válida.\n")
+        print("Insira uma opção válida.\n")
         Pausar()
 
 

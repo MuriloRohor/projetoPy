@@ -13,9 +13,7 @@ class Controller:
         ano = input("Digite o ano do veículo: ")
         id = len(LISTA_CARROS) + 1
         object_carro = Carro(marca, modelo, cor, ano, id)
-        print(LISTA_CARROS)
         LISTA_CARROS.append(object_carro)
-        print(LISTA_CARROS)
         DataBaseJson.SalvarArquivo(LISTA_CARROS)
     
     @staticmethod
@@ -24,58 +22,23 @@ class Controller:
             print('\n')
             print(f"Id: {carro.GetId()}\nMarca: {carro.GetMarca()}\nModelo: {carro.GetModelo()}\nCor: {carro.GetCor()}\nAno: {carro.GetAno()}")
 
-
-def CadastrarCarro():
-    id = len(carros) + 1
-    marca = input("Digite a marca do veículo: ")
-    modelo = input("Digite o modelo do veículo: ")
-    cor = input("Digite a cor do veículo: ")
-    ano = input("Digite o ano do veículo: ")
-    carro_molde = {
-    "id" : id,
-    "marca" : marca,
-    "modelo" : modelo,
-    "cor" : cor,
-    "ano" : ano,
-    }
-    carros.append(carro_molde)
-    DataBaseJson.SalvarArquivo(carros)
-
-def ListarCarros():
-    for carro in carros:
-        print(f"""
-            Id     : {carro['id']}
-            Marca  : {carro['marca']}
-            Modelo : {carro['modelo']}
-            Cor    : {carro['cor']}
-            Ano    : {carro['ano']}
-            """)
-        
-def ExcluirCarro():
-    id_select = int(input("Digite o ID do veículo que deseja excluir: "))
-    for i, e in enumerate(carros):
-        if e['id'] == id_select:
-            carros.pop(i)
-            DataBaseJson.SalvarArquivo(carros)
-            print("Veículo excluído com sucesso!")
-
-def SelecionarVeiculoId():
-    id_select = int(input("Digite o ID do veículo que deseja selecionar: "))
-    for carro in carros:
-        if carro['id'] == id_select:
-            print(f"""
-            Id     : {carro['id']}
-            Marca  : {carro['marca']}
-            Modelo : {carro['modelo']}
-            cor    : {carro['cor']}
-            ano    : {carro['ano']}
-            """)
-            
-        
-
-def Pausar():
-    input("Pressione ENTER para continuar...")
-
-
-
-
+    @staticmethod
+    def Excluir():
+        id_select = int(input("Digite o ID do veículo que deseja excluir: "))
+        for i, e in enumerate(LISTA_CARROS):
+            if e.GetId() == id_select:
+                LISTA_CARROS.pop(i)
+                DataBaseJson.SalvarArquivo(LISTA_CARROS)
+                print("Veículo excluído com sucesso!")
+    @staticmethod
+    def SelecionarPorId():
+        id_select = int(input("Digite o ID do veículo que deseja selecionar: "))
+        for i in LISTA_CARROS:
+            if i.GetId() == id_select:
+                print(f"""
+                Id     : {i.GetId()}
+                Marca  : {i.GetMarca()}
+                Modelo : {i.GetModelo()}
+                cor    : {i.GetCor()}
+                ano    : {i.GetAno()}
+                """)

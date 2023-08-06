@@ -11,3 +11,10 @@
 2023-08-06 14:31:44.299251 - Lista Objetos convertido para Dicionario.
 2023-08-06 14:35:42.862586 - Lista Objetos convertido para Dicionario.
 2023-08-06 14:35:51.946987 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:57:54.961980 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:58:00.562716 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:58:08.174346 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:58:16.008930 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:58:18.738054 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:58:26.296471 - Lista Objetos convertido para Dicionario.
+2023-08-06 14:58:33.867225 - Lista Objetos convertido para Dicionario.
